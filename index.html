@@ -40,7 +40,8 @@
             border-radius: 12px;
             background: rgba(29, 209, 0, 0.1);">
                 <p class="mr-[10px] font-[700] leading-[20px] text-[#1DD100] text-[20px]">Bus</p>
-                <img class="w-[20px] h-[14px] " style="border: 0px solid rgb(29, 209, 0);" src="images/bus-logo.png" alt="">
+                <img class="w-[20px] h-[14px] color-[#1DD100] " style="border: 0px solid rgb(29, 209, 0);"
+                    src="images/bus-logo.png" alt="">
             </div>
         </nav>
 
@@ -49,31 +50,136 @@
 
 
 
-        <section class="mx-auto mt-[30px] lg:w-[1170px] lg:h-[550px] round-[32px] " style="background: linear-gradient(180.00deg, rgba(3, 7, 18, 0.5),rgba(3, 7, 18, 0) 100%),url(1); background-image: url('images/banner.png');">
+        <section class="mx-auto mt-[30px] lg:w-[1170px] lg:h-[550px] round-[32px] "
+            style="background: linear-gradient(180.00deg, rgba(3, 7, 18, 0.5),rgba(3, 7, 18, 0) 100%),url(1); background-image: url('images/banner.png');">
             <div class="pt-[70px]">
-                <p class="text-[64px] font-extrabold leading-[86px] text-center text-[#FFFFFF]"> End-to-End Travel with <br> <span class="text-[#1DD100]">BH Paribahan</span> </p>
+                <p class="text-[64px] font-extrabold leading-[86px] text-center text-[#FFFFFF]"> End-to-End Travel with
+                    <br> <span class="text-[#1DD100]">BH Paribahan</span>
+                </p>
             </div>
-            <p class="w-full flex flex-row items-center justify-center text-center text-[18px] font-normal text-[#FFFF] pt-[16px]">Welcome to our online ticketing platform, where you can conveniently <br> plan and book your bus trips with ease. <br> Click the button below for more information </p>
+            <p
+                class="w-full flex flex-row items-center justify-center text-center text-[18px] font-normal text-[#FFFF] pt-[16px]">
+                Welcome to our online ticketing platform, where you can conveniently <br> plan and book your bus trips
+                with ease. <br> Click the button below for more information </p>
 
-            <div class="mt-[32px] mx-auto w-[170px] h-[65px] flex flex-row justify-center items-center p-[21px] bg-[#1DD100] rounded-[12px] ">
-                <button class="text-[20px] font-semibold leading-[23px]">Buy Tickets</button>
+            <div
+                class=" btn border-none mt-[32px] mx-auto w-[170px] h-[65px] flex flex-row justify-center items-center p-[21px] bg-[#1DD100] rounded-[12px] ">
+                <button class="text-[20px] font-semibold leading-[23px]" id="Buy-tickets">Buy Tickets</button>
             </div>
         </section>
     </header>
     <main>
-        <section class="mt-[120px] ">
-            <p class="">Best offers for you</p>
+        <!-- offer section -->
+        <section class="mt-[120px] w-[1170px] mx-auto">
+            <p class="w-[1170px] font-[700] text-[40px] flex justify-center">Best offers for you</p>
 
-            <div>
-                <div>
-                    <p><span>15% OFF</span> <span>on your next purchase</span> use by January 2024</p>
+            <div class="mt-[48px]  flex justify-between">
+                <div class="flex  w-[572px] h-[220px] bg-[#FFBF0F] rounded-[24px] flex-row items-center justify-center">
+                    <p class="text-[18px] font-[500] text-[#03071266]"><span
+                            class="text-[#030712CC]  font-extrabold text-[40px] ">15% OFF</span> <br> <span
+                            class="font-[600] text-[20px] "> on your next purchase</span> <br> use by January 2024</p>
                     <img src="images/cupon-devider.png" alt="">
-                    <p>/* Couple 20 Coupon Code */</p>
+                    <div class="flex flex-col">
+                        <p class="font-[700] text-[32px] text-center text-[#030712]">NEW15</p>
+                        <p class="font-semibold text-[20px] text-[#03071266]">Coupon Code</p>
+                    </div>
+
+                </div>
+
+                <div class="flex  w-[572px] h-[220px] bg-[#F78C9C] rounded-[24px] flex-row items-center justify-center">
+                    <p class="text-[18px] font-[500] text-[#03071266]"><span
+                            class="text-[#030712CC]  font-extrabold text-[40px] ">20% OFF</span> <br> <span
+                            class="font-[600] text-[20px] "> on your next purchase</span> <br> use by January 2024</p>
+                    <img src="images/cupon-devider.png" alt="">
+                    <div class="flex flex-col">
+                        <p class="font-[700] text-[32px] text-center text-[#030712]">Couple 20</p>
+                        <p class="font-semibold text-[20px] text-[#03071266]">Coupon Code</p>
+                    </div>
+
+                </div>
+
+
+
+
+            </div>
+            <div
+                class=" btn mt-[48px] w-[188px] h-[65px] flex mx-auto justify-center text-center items-center pt-[21px] pb-[21px] pl-[30px] pr-[30px] box-border border-[1px] rounded-[12px] border-[#1DD100]">
+                <button class="text-[#1DD100] text-[18px] font-[700]">See All Offers</button>
+            </div>
+        </section>
+
+        <!-- Paribahan section -->
+
+        <section class="mt-[120px] w-full border-t-2 border-green-400" style="border-radius:  88px 88px 0 0;">
+            <div class="font-[700] text-[40px] items-center mt-[120px] w-full text-center ">
+                <p class="text-[#030712] ">BH-Paribahan</p>
+
+            </div>
+            <p class="w-full text-center mt-[20px]">Indeed, the application supports the execution of unit tests within
+                its interface, providing users with <br> the ability to conveniently review the outcomes directly within
+                the platform</p>
+
+            <!-- Ticket price section -->
+            <!-- ID SECTION -->
+
+            <div class="lg:w-[1170px] mt-[48px] mx-auto flex justify-between">
+                <div class="flex lg:flex-row justify-between lg:w-[808px] bg-[#FFFFFF] rounded-[24px] ">
+                    <div class="flex">
+                        <img class="w-[68px] h-[48px] mr-[20px]" src="images/bus-logo.png" alt="">
+                        <div>
+                            <p class="text-[#030712] font-[700] text-[32px] ">Greenline Paribahan</p>
+                            <p>Coach-009-WEB ! AC_Business</p>
+                        </div>
+                    </div>
+                    <div class="W-[200px] h-[50px] rounded-[12px] bg-[#1DD10026] flex flex-row items-center px-3">
+                        <img src="images/seat-green.png" alt="" class="text-[#1DD100]">
+                        <p class="text-[#1DD100] text-[15px] font-[500]"><span id="Seat-left" class="">40</span> Seats left</p>
+
+                    </div>
+                </div>
+                <img src="images/info-devider.png" alt="">
+                <div>
+                    <img src="images/fare.png" alt="">
+                    <p>550 Taka</p>
+                    <p>Per Seat</p>
                 </div>
             </div>
         </section>
+
+
+
+
+
     </main>
-    <footer>
+    <footer class="mt-[120px] w-full bg-[#030712] h-[457px] ">
+        <div class="pt-[120px] w-[1170px] h-[118px] mx-auto justify-between flex flex-row ">
+            <div class="flex flex-col ">
+                <p class="font-bold text-[30px]   text-[#FFFF] ">BH-Ticket</p>
+                <p class="text-[#FFFFFFCC] font-normal text-[18px] items-left ">BH-Ticket is a website to make your <br>
+                    commuting more efficient.</p>
+            </div>
+
+            <div>
+                <p class="text-[#FFFF] mb-[10px]">Download Our App</p>
+                <div class="border flex w-full pl-4 pr-4 rounded-[12px] text-[#FFFF]">
+                    <img src="images/playstore.png" alt="">
+                    <p>Get it on <br> <span>Google Play</span></p>
+                </div>
+            </div>
+
+        </div>
+        <div class="mt-[200px] w-[1170px] mx-auto flex justify-between">
+            <p class="text-[#FFFFFFB3]">@All rights reserved, BH-Ticket services limited.2024</p>
+            <div class="flex flex-row text-[#FFFFFFB3]">
+                <p class="mr-[20px]">Terms and Conditions</p>
+                <p class="mr-[20px]">Return and Refund Policy</p>
+                <p class="mr-[20px]">Privacy Policy</p>
+            </div>
+        </div>
+
+
+
+
 
     </footer>
 </body>
