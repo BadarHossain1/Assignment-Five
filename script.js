@@ -2,7 +2,7 @@
 
 let seatCount = 1;
 
-let TotalSit = 16;
+let TotalSit = 32;
 
 let smallSit = 0;
 
@@ -11,6 +11,8 @@ let TotalPrice = 0;
 let GrandTotal = 0;
 
 let couponDiscount = 0;
+
+
 
 
 
@@ -23,9 +25,13 @@ const Totalofprice = document.getElementById('total-price');
 const Grandofprice = document.getElementById('grand-price');
 
 
-
+const seatADD = document.getElementById('seat-add')
+const economy = document.getElementById('Economy-add')
+const pr = document.getElementById('taka-add')
 
 function Seat(button) {
+
+    
     if (seatCount <= 4) {
         button.style.backgroundColor = '#1DD100';
         ++seatCount;
@@ -39,6 +45,24 @@ function Seat(button) {
 
         GrandTotal = smallSit * 550;
         Grandofprice.innerText = GrandTotal;
+
+        const p = document.createElement('p');
+        p.innerText = button.innerText;
+
+        seatADD.appendChild(p);
+
+        const eco = document.createElement('p');
+        eco.innerText = 'Economy';
+
+        economy.appendChild(eco);
+
+        
+        const pricee = document.createElement('p');
+        pricee.innerText = '550';
+
+        pr.appendChild(pricee);
+
+
 
 
 
@@ -83,5 +107,28 @@ document.getElementById('apply-btn').addEventListener('click', function () {
 });
 
 
+function scrollToSection() {
+    document.getElementById('paribahan-section').scrollIntoView({ behavior: 'auto'});
+}
 
+const namaya = document.getElementById('Name')
+const number = document.getElementById('number')
+const email = document.getElementById('email')
+const myButton = document.getElementById('NEXT-BUTTON')
+
+
+namaya.addEventListener('input', checkInputs);
+number.addEventListener('input', checkInputs);
+email.addEventListener('input', checkInputs);
+
+function checkInputs() {
+   
+    if (namaya.value && number.value && email.value) {
+
+        myButton.disabled = false;
+    } else {
+
+        myButton.disabled = true;
+    }
+}
 

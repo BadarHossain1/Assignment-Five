@@ -13,11 +13,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
 
+    <link rel="shortcut icon" href="images/stoppage.png" type="image/x-icon">
+
 
 
 </head>
 
-<body>
+<body id="body">
     <header>
         <!-- Navbar here -->
         <nav class="navbar mt-[40px]  lg:w-[1170px] lg:h-[56px] mx-auto justify-between">
@@ -34,14 +36,14 @@
                 </ul>
             </div>
 
-            <div class="flex w-[130px] h-[56px] justify-center align-center pt-[12px] pr-[25px] pb-[12px] pl-[25px] "
+            <div class="flex w-[130px] h-[56px] justify-center items-center text-center pt-[12px] pr-[25px] pb-[12px] pl-[25px] "
                 style="box-sizing: border-box;
             border: 1px solid rgba(29, 209, 0, 0.4);
             border-radius: 12px;
             background: rgba(29, 209, 0, 0.1);">
                 <p class="mr-[10px] font-[700] leading-[20px] text-[#1DD100] text-[20px]">Bus</p>
-                <img class="w-[20px] h-[14px] color-[#1DD100] " style="border: 0px solid rgb(29, 209, 0);"
-                    src="images/bus-logo.png" alt="">
+                <img class="w-[25px] h-[25px]  color-[#1DD100] " style="border: 0px solid rgb(29, 209, 0);"
+                    src="images/bus-icon.png" alt="">
             </div>
         </nav>
 
@@ -64,7 +66,7 @@
 
             <div
                 class=" btn border-none mt-[32px] mx-auto w-[170px] h-[65px] flex flex-row justify-center items-center p-[21px] bg-[#1DD100] rounded-[12px] ">
-                <button class="text-[20px] font-semibold leading-[23px]" id="Buy-tickets">Buy Tickets</button>
+                <button onclick="scrollToSection()" class="text-[20px] font-semibold leading-[23px]" id="Buy-tickets">Buy Tickets</button>
             </div>
         </section>
     </header>
@@ -110,7 +112,7 @@
 
         <!-- Paribahan section -->
 
-        <section class="mt-[120px] w-full border-t-2 border-green-400" style="border-radius:  88px 88px 0 0;">
+        <section id="paribahan-section" class="mt-[120px] w-full bg-[#F7F8F8] border-t-2 border-green-400" style="border-radius:  88px 88px 0 0;">
             <div class="font-[700] text-[40px] items-center mt-[120px] w-full text-center ">
                 <p class="text-[#030712] ">BH-Paribahan</p>
 
@@ -124,7 +126,7 @@
 
 
 
-            <section class="mt-[48px] w-[90%] m-auto p-[24px] ">
+            <section class="mt-[48px] w-[90%] m-auto p-[24px]  rounded-[24px] ">
                 <div style="border-radius: 24px;
                 background: rgb(255, 255, 255);" class="flex justify-evenly flex-1">
                     <div class="space-y-6 w-[808px] py-8">
@@ -228,31 +230,32 @@
         <!-- select your seat section -->
 
 
-        <section class="container w-[1170px] mx-auto mt-[27px] flex justify-between">
+        <section class="container w-[1170px] mx-auto mt-[50px] pt-[50px] flex justify-around ">
             <div class="seats w-[609px] space-y-[20px]">
                 <div>
                     <p class="text-[#030712] font-semibold text-[24px] ">Select Your Seat</p>
                 </div>
 
                 <!-- available and selected part -->
-
-                <div class="w-[609px] mx-auto border-2 border-dashed border-[#03071233] flex justify-between py-[10px]">
+                <hr class=" w-[609px] mx-auto border-[#03071233] " style="border: 1px dashed ">
+                <div class="w-[609px]  flex justify-between py-[10px]">
                     <div class="flex graySeat">
                         <div>
                             <img src="images/seat-gray.png" alt="">
                         </div>
                         <p class="text-[#03071280] text-[18px] ">Available</p>
                     </div>
-
+                    
                     <div class="flex grayfilled">
                         <div>
                             <img src="images/seat-green-filled.png" alt="">
                         </div>
                         <p class="text-[#1DD100] text-[18px] font-[500] ">Selected</p>
                     </div>
-
-
+                    
+                    
                 </div>
+                <hr class=" w-[609px] mx-auto border-[#03071233] " style="border: 1px dashed ">
 
 
                 <!-- chakka part -->
@@ -261,7 +264,7 @@
 
                     <div
                         class="bg-[#0307121A] rounded-[12px] w-[110px] h-[56px] items-center text-center flex justify-center">
-                        <img src="images/seat-green.png" alt="">
+                        <img src="images/pngwing.com.png" alt="" class="w-[24px] h-[24px]">
                     </div>
 
                 </div>
@@ -343,6 +346,76 @@
 
                         </div>
 
+                        <div class="flex space-x-[32px] items-center space-y-[24px]">
+                            <p>E</p>
+                            <div>
+                                <div onclick="Seat(this)" id="myButton"
+                                    class="btn text-[#03071280] bg-[#0307121A] rounded-[12px] w-[110px] h-[56px] items-center text-center flex justify-center">
+                                    <p>E1</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div onclick="Seat(this)" id="myButton"
+                                    class="btn text-[#03071280] bg-[#0307121A] rounded-[12px] w-[110px] h-[56px] items-center text-center flex justify-center">
+                                    <p>E2</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="flex space-x-[32px] items-center space-y-[24px]">
+                            <p>F</p>
+                            <div>
+                                <div onclick="Seat(this)" id="myButton"
+                                    class="btn text-[#03071280] bg-[#0307121A] rounded-[12px] w-[110px] h-[56px] items-center text-center flex justify-center">
+                                    <p>F1</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div onclick="Seat(this)" id="myButton"
+                                    class="btn text-[#03071280] bg-[#0307121A] rounded-[12px] w-[110px] h-[56px] items-center text-center flex justify-center">
+                                    <p>F2</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="flex space-x-[32px] items-center space-y-[24px]">
+                            <p>G</p>
+                            <div>
+                                <div onclick="Seat(this)" id="myButton"
+                                    class="btn text-[#03071280] bg-[#0307121A] rounded-[12px] w-[110px] h-[56px] items-center text-center flex justify-center">
+                                    <p>G1</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div onclick="Seat(this)" id="myButton"
+                                    class="btn text-[#03071280] bg-[#0307121A] rounded-[12px] w-[110px] h-[56px] items-center text-center flex justify-center">
+                                    <p>G2</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="flex space-x-[32px] items-center space-y-[24px]">
+                            <p>H</p>
+                            <div>
+                                <div onclick="Seat(this)" id="myButton"
+                                    class="btn text-[#03071280] bg-[#0307121A] rounded-[12px] w-[110px] h-[56px] items-center text-center flex justify-center">
+                                    <p>H1</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div onclick="Seat(this)" id="myButton"
+                                    class="btn text-[#03071280] bg-[#0307121A] rounded-[12px] w-[110px] h-[56px] items-center text-center flex justify-center">
+                                    <p>H2</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+
 
 
 
@@ -420,6 +493,81 @@
 
                         </div>
 
+                        <div class="flex space-x-[32px] items-center space-y-[24px]">
+                            <p>E</p>
+                            <div>
+                                <div onclick="Seat(this)" id="myButton"
+                                    class="btn text-[#03071280] bg-[#0307121A] rounded-[12px] w-[110px] h-[56px] items-center text-center flex justify-center">
+                                    <p>E3</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div onclick="Seat(this)" id="myButton"
+                                    class="btn text-[#03071280] bg-[#0307121A] rounded-[12px] w-[110px] h-[56px] items-center text-center flex justify-center">
+                                    <p>E4</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="flex space-x-[32px] items-center space-y-[24px]">
+                            <p>F</p>
+                            <div>
+                                <div onclick="Seat(this)" id="myButton"
+                                    class="btn text-[#03071280] bg-[#0307121A] rounded-[12px] w-[110px] h-[56px] items-center text-center flex justify-center">
+                                    <p>F3</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div onclick="Seat(this)" id="myButton"
+                                    class="btn text-[#03071280] bg-[#0307121A] rounded-[12px] w-[110px] h-[56px] items-center text-center flex justify-center">
+                                    <p>F4</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="flex space-x-[32px] items-center space-y-[24px]">
+                            <p>G</p>
+                            <div>
+                                <div onclick="Seat(this)" id="myButton"
+                                    class="btn text-[#03071280] bg-[#0307121A] rounded-[12px] w-[110px] h-[56px] items-center text-center flex justify-center">
+                                    <p>G3</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div onclick="Seat(this)" id="myButton"
+                                    class="btn text-[#03071280] bg-[#0307121A] rounded-[12px] w-[110px] h-[56px] items-center text-center flex justify-center">
+                                    <p>G4</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                        <div class="flex space-x-[32px] items-center space-y-[24px]">
+                            <p>H</p>
+                            <div>
+                                <div onclick="Seat(this)" id="myButton"
+                                    class="btn text-[#03071280] bg-[#0307121A] rounded-[12px] w-[110px] h-[56px] items-center text-center flex justify-center">
+                                    <p>H3</p>
+                                </div>
+                            </div>
+                            <div>
+                                <div onclick="Seat(this)" id="myButton"
+                                    class="btn text-[#03071280] bg-[#0307121A] rounded-[12px] w-[110px] h-[56px] items-center text-center flex justify-center">
+                                    <p>H4</p>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+
+
+
+                    </div>
+
 
 
 
@@ -441,7 +589,7 @@
 
                 <!-- calculation box -->
 
-                <div class="w-[433px] rounded-[12px] bg-[#F7F8F8] space-y-[15px]">
+                <div class="w-[433px] rounded-[12px] bg-[#F7F8F8] space-y-[15px] pt-[25px]">
                     <!-- Table header -->
                     <div class="flex justify-around w-full ">
                         <div class="text-[#030712] font-semibold">
@@ -462,31 +610,20 @@ height: 13px; " class="px-[10px]">0</span></p>
 
                     <div id="add-here">
                         <div class="flex justify-around w-full ">
-                            <div class="text-[#030712] font-semibold">
-                                <p>C2</p>
+                            <div class="text-[#030712] font-semibold space-y-[15px]" id="seat-add">
+                                
                             </div>
-                            <div class="text-[#030712] font-semibold">
-                                <p>Economy</p>
+                            <div class="text-[#030712] font-semibold space-y-[15px]" id="Economy-add">
+                               
                             </div>
-                            <div class="text-[#030712] font-semibold">
-                                <p>550</p>
+                            <div class="text-[#030712] font-semibold space-y-[15px]" id="taka-add">
+                                
                             </div>
                         </div>
 
-                        <div class="flex justify-around w-full ">
-                            <div class="text-[#030712] font-semibold">
-                                <p>Seat</p>
-                            </div>
-                            <div class="text-[#030712] font-semibold">
-                                <p>Class</p>
-                            </div>
-                            <div class="text-[#030712] font-semibold">
-                                <p>Price</p>
-                            </div>
-                        </div>
                     </div>
 
-                    <hr class=" w-[350px] mx-auto" style="border: 1px solid rgba(3, 7, 18, 0.2);">
+                    <hr class=" w-[350px] mx-auto" style="border: 1px dashed rgba(3, 7, 18, 0.2);">
 
                     <!-- Total price here -->
 
@@ -520,41 +657,43 @@ height: 13px; " class="px-[10px]">0</span></p>
                 <div class="w-[433px] space-y-[24px] ">
                     <div class="space-y-[16px]">
                         <p class="text-[#030712] text-[16px] font-semibold">Passenger Name*</p>
-                        <input type="text" placeholder="Enter Your Name" class="input w-full max-w-[433px]" />
+                        <input type="text" placeholder="Enter Your Name" class="input w-full max-w-[433px] " id="Name" />
                     </div>
                     <div class="space-y-[16px]">
                         <p class="text-[#030712] text-[16px] font-semibold">Phone Number</p>
-                        <input type="number" placeholder="Enter Your Phone Number" class="input w-full max-w-[433px]" />
+                        <input type="number" placeholder="Enter Your Phone Number" class="input w-full max-w-[433px]" id="number"/>
                     </div>
                     <div class="space-y-[16px]">
                         <p class="text-[#030712] text-[16px] font-semibold">Email ID</p>
-                        <input type="email" placeholder="Enter Your Email ID" class="input w-full max-w-[433px]" />
+                        <input type="email" placeholder="Enter Your Email ID" class="input w-full max-w-[433px]" id="email" />
                     </div>
 
 
                     <!-- Open the modal using ID.showModal() method -->
-                    <button class="btn w-[433px] text-[#FFFFFF] font-extrabold text-[20px]" style="border-radius: 16px;
+                   <button  id="NEXT-BUTTON" disabled  class="btn w-[433px] text-[#FFFFFF] font-extrabold text-[20px] " style="border-radius: 16px;
 
-                    background: rgb(29, 209, 0);" onclick="my_modal_5.showModal()">Next</button>
-                    <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle ">
-                        <div class="modal-box  text-center border-2">
-                            <div class="w-full text-center flex flex-row justify-center mt-[20px]">
-                                <img src="images/success.png" alt="">
-                            </div>
-                            <p class="mt-[20px] text-[24px] font-[700] leading-[28px] text-[#27AE60]">SUCCESS</p>
-                            <p class="mt-[20px] font-[500] text-[15px] items-center">Thank you for Booking Our Bus
-                                Seats.
-                                We are working hard to find the best service and deals for you. <br>
-                                <span class="text-[#4A4A4A] mt-[15px]">Shortly you will find a confirmation in your email.</span></p>
-                                <div class="modal-action w-full mb-[20px] flex flex-row justify-center text-center">
-                                    <form method="dialog">
-                                        <!-- if there is a button in form, it will close the modal -->
-                                        <button class="btn   mt-[20px] w-[300px] h-[56px] rounded-[32px] bg-[#27AE60]  "><span class="text-[#FFFFFF] ">Continue</span></button>
-                                    
-                                </form>
-                            </div>
+                   background: rgb(29, 209, 0);" onclick="my_modal_5.showModal()">Next</button>
+                   <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle "> 
+                    <div class="modal-box  text-center border-2">
+                        <div class="w-full text-center flex flex-row justify-center mt-[20px]">
+                            <img src="images/success.png" alt="">
                         </div>
-                    </dialog>
+                        <p class="mt-[20px] text-[24px] font-[700] leading-[28px] text-[#27AE60]">SUCCESS</p>
+                        <p class="mt-[20px] font-[500] text-[15px] items-center">Thank you for Booking Our Bus
+                            Seats.
+                            We are working hard to find the best service and deals for you. <br>
+                            <span class="text-[#4A4A4A] mt-[15px]">Shortly you will find a confirmation in your email.</span></p>
+                            <div class="modal-action w-full mb-[20px] flex flex-row justify-center text-center">
+                                <form method="dialog">
+                                    <!-- if there is a button in form, it will close the modal -->
+                                    <button class="btn   mt-[20px] w-[300px] h-[56px] rounded-[32px] bg-[#27AE60]  "><span class="text-[#FFFFFF] ">Continue</span></button>
+                                
+                            </form>
+                        </div>
+                    </div>
+                </dialog> 
+
+                    
                 </div>
 
                 <div class="flex  w-[433px] justify-around">
