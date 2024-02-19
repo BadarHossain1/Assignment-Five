@@ -83,8 +83,8 @@ document.getElementById('apply-btn').addEventListener('click', function () {
 
 
     const couponElement = document.getElementById("input-field");
-    const couponValue = couponElement.value;
-    const couponCode = couponValue.split(" ").join("").toUpperCase();
+    const couponCode = couponElement.value;
+    
 
     if(couponCode === "NEW15"){
        couponDiscount = TotalPrice*0.15;
@@ -92,7 +92,7 @@ document.getElementById('apply-btn').addEventListener('click', function () {
         Grandofprice.innerText = GrandTotal;
 
     }
-    else if(couponCode==="COUPLE20"){
+    else if(couponCode==="Couple 20"){
         couponDiscount = TotalPrice*0.20;
         GrandTotal = TotalPrice-couponDiscount;
         Grandofprice.innerText = GrandTotal;
